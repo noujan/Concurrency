@@ -18,14 +18,7 @@ struct ConcurrencyView: View {
                 .frame(height: 200)
         }
         .task {
-            do {
-                try await viewModel.downloadImages()
-                // Images have been downloaded successfully
-
-            } catch {
-                // Handle any errors that may have occurred during image download
-                print(error)
-            }
+            await viewModel.downloadImages()
         }
     }
 }

@@ -25,7 +25,7 @@ class ImagesViewModel: ObservableObject {
     }
     
     
-    func downloadImages() {
+    func downloadImages() async {
         imageUrls
             .publisher
             .compactMap { URL(string: $0) }
