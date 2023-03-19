@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		E9F8535F29BA8DA400798800 /* ConcurrencyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F8535E29BA8DA400798800 /* ConcurrencyApp.swift */; };
-		E9F8536129BA8DA400798800 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F8536029BA8DA400798800 /* ContentView.swift */; };
+		E9F8536129BA8DA400798800 /* ConcurrencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F8536029BA8DA400798800 /* ConcurrencyView.swift */; };
 		E9F8536329BA8DA500798800 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9F8536229BA8DA500798800 /* Assets.xcassets */; };
 		E9F8536629BA8DA500798800 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9F8536529BA8DA500798800 /* Preview Assets.xcassets */; };
 		E9F8537029BA8DA500798800 /* ConcurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F8536F29BA8DA500798800 /* ConcurrencyTests.swift */; };
 		E9F8537A29BA8DA500798800 /* ConcurrencyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F8537929BA8DA500798800 /* ConcurrencyUITests.swift */; };
 		E9F8537C29BA8DA500798800 /* ConcurrencyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F8537B29BA8DA500798800 /* ConcurrencyUITestsLaunchTests.swift */; };
+		E9F8538D29BA938D00798800 /* ImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F8538C29BA938D00798800 /* ImagesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		E9F8535B29BA8DA400798800 /* Concurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F8535E29BA8DA400798800 /* ConcurrencyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyApp.swift; sourceTree = "<group>"; };
-		E9F8536029BA8DA400798800 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E9F8536029BA8DA400798800 /* ConcurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyView.swift; sourceTree = "<group>"; };
 		E9F8536229BA8DA500798800 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9F8536529BA8DA500798800 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E9F8536B29BA8DA500798800 /* ConcurrencyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcurrencyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +45,7 @@
 		E9F8537529BA8DA500798800 /* ConcurrencyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcurrencyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F8537929BA8DA500798800 /* ConcurrencyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyUITests.swift; sourceTree = "<group>"; };
 		E9F8537B29BA8DA500798800 /* ConcurrencyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E9F8538C29BA938D00798800 /* ImagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				E9F8535E29BA8DA400798800 /* ConcurrencyApp.swift */,
-				E9F8536029BA8DA400798800 /* ContentView.swift */,
+				E9F8536029BA8DA400798800 /* ConcurrencyView.swift */,
+				E9F8538C29BA938D00798800 /* ImagesViewModel.swift */,
 				E9F8536229BA8DA500798800 /* Assets.xcassets */,
 				E9F8536429BA8DA500798800 /* Preview Content */,
 			);
@@ -257,7 +260,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9F8536129BA8DA400798800 /* ContentView.swift in Sources */,
+				E9F8538D29BA938D00798800 /* ImagesViewModel.swift in Sources */,
+				E9F8536129BA8DA400798800 /* ConcurrencyView.swift in Sources */,
 				E9F8535F29BA8DA400798800 /* ConcurrencyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,7 +431,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +461,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
