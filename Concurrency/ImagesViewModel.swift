@@ -26,14 +26,16 @@ class ImagesViewModel: ObservableObject {
     
     
     func downloadImages() async {
+        ///    https://www.andyibanez.com/posts/file-download-queue-combine/
+        ///    This was very intresting
         imageUrls
-            .publisher
-            .compactMap { URL(string: $0) }
+            .publisher  /// Returns each link
+            .compactMap { URL(string: $0) } /// Will ignore nill values and returns URL
             .flatMap {
                 URLSession.shared.dataTaskPublisher(for: $0)
-            }
-            .compactMap { $0.data }
-            .compactMap { UIImage(data: $0) }
+            }   /// Will turn
+            .compactMap { $0.data } /// Will return data. CompactMap will remove nill values.
+            .compactMap { UIImage(data: $0) }   /// Again using Compactmap we get rid of nill values and return image
             .sink(receiveCompletion: ( { state in
                 // Handle completion here
             })) { output in
