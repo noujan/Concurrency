@@ -36,6 +36,7 @@ class ImagesViewModel: ObservableObject {
             }   /// Will turn
             .compactMap { $0.data } /// Will return data. CompactMap will remove nill values.
             .compactMap { UIImage(data: $0) }   /// Again using Compactmap we get rid of nill values and return image
+            .retry(5)   /// Only try 5 times to download and return image, if you fail more than 5 times. Just stop
             .sink(receiveCompletion: ( { state in
                 // Handle completion here
             })) { output in
